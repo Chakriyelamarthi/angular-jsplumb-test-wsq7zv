@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <ng-template #nodes></ng-template>
+  </div>
+
+  <div class="row">
+    <button clasa="align-middle" (click)="saveNodeJson()">
+      Save Flow Node JSON
+    </button>
+  </div>
+  <div class="row" *ngIf="connectionsData.length > 0">
+    <table class="my-table">
+      <thead class="my-table headers">
+        <tr>
+          <th>Source</th>
+          <th>Target</th>
+          
+        </tr>
+      </thead>
+      <tbody class="my-table body">
+        <tr *ngFor="let test of connectionsData">
+          <td style="margin-left:5px;">{{ splitData(test.uuids[0]) }}</td>
+          <td style="margin-left:5px;">{{ splitData(test.uuids[1]) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

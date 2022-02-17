@@ -1,0 +1,11 @@
+
+<input type="file" accept=".csv"(change)="handleFileSelect($event)">
+<div *ngIf="nodes.length>0">
+  <nodes-container #nodeContainer [nodes]="nodes" [connections]="connections"></nodes-container>
+</div>
+
+<div >
+ 
+ 
+<!-- <span>{{test.uuids}}</span> -->
+</div>
